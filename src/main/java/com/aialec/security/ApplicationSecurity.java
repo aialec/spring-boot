@@ -56,12 +56,11 @@ public class ApplicationSecurity extends WebSecurityConfigurerAdapter {
 	    .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
     }
     
-    @Autowired
-    public void configureGlobal(AuthenticationManagerBuilder builder) throws Exception {
-    	builder.inMemoryAuthentication().withUser("user").password("user").roles("USER").and().withUser("admin")
-		.password("admin").roles("ADMIN");
-    }
-    
+//    @Autowired
+//    public void configureGlobal(AuthenticationManagerBuilder builder) throws Exception {
+//    	builder.inMemoryAuthentication().withUser("user").password("user").roles("USER").and().withUser("admin")
+//		.password("admin").roles("ADMIN");
+//    }
     
     @Bean(name="passwordEncoder")
        public PasswordEncoder passwordencoder(){
